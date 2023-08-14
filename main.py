@@ -2,8 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-def get_combined_employee_data(file_path):
-    df = pd.read_csv(file_path, encoding='latin-1')
+def get_combined_employee_data(file_path_in):
+    df = pd.read_csv(file_path_in, encoding='latin-1')
     dfc = df.drop(['location_name', 'location_latitude', 'location_longitude', 'comments', 'salary_id', 'submitted_at',
                    'job_title_rank', 'job_title'], axis=1)
     apple_employees = dfc[dfc['employer_name'] == 'apple']
